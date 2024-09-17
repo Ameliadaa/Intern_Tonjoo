@@ -11,9 +11,10 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: "#229799",
+        secondary: "#48CFCB",
        
       },
     },
-  },
+    },
   plugins: [],
 };
