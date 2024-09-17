@@ -42,20 +42,20 @@ export default function Pharsed() {
           <div className="bg-gray-100 p-4 rounded-lg mb-6">
             <ul className="flex border-b">
               <li className="mr-1">
-                <Link className=" inline-block py-2 px-4 text-blue-500 font-semibold hover:text-blue-800"
+                <Link className=" inline-block py-2 px-4 text-blue-500 font-semibold hover:bg-primary hover:text-white "
                   href="/"> Input Text
                 </Link>
                
               </li>
               <li className="mr-1">
-                <Link className='bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800' href={"/Pharsed"}>
+                <Link className='bg-primary inline-block py-2 px-4 text-white ' href={"/Pharsed"}>
                 Pharsed Text
                 </Link>
                
               </li>
               <li className="mr-1">
                 <a
-                  className="inline-block py-2 px-4 text-blue-500 hover:text-blue-800"
+                  className="inline-block py-2 px-4 hover:bg-primary hover:text-white"
                   href="#"
                 >
                   URL List
