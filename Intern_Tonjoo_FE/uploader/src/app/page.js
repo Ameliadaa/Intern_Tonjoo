@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="bg-white rounded-lg shadow p-8 max-w-4xl mx-auto">
@@ -11,59 +13,69 @@ export default function Home() {
         <div className="bg-gray-100 p-4 rounded-lg mb-6">
           <ul className="flex border-b">
             <li className="mr-1">
-              <a
-                className="bg-white inline-block py-2 px-4 text-blue-500 font-semibold"
-                href="#"
+              <Link
+                className="bg-primary inline-block py-2 px-4 text-white font-semibold"
+                href="/"
               >
                 Reupload Image in Text
-              </a>
+              </Link>
             </li>
             <li className="mr-1">
-              <a
-                className="inline-block py-2 px-4 text-blue-500 hover:text-blue-800"
-                href="#"
+              <Link
+                href="/LinkReupload"
+                className="inline-block py-2 px-4 text-blue-500  hover:bg-primary hover:text-white "
               >
                 Link Reupload
-              </a>
+              </Link>
             </li>
             <li className="mr-1">
-              <a
-                className="inline-block py-2 px-4 text-blue-500 hover:text-blue-800"
-                href="#"
+              <Link
+                href="/FileUpload"
+                className="inline-block py-2 px-4 text-blue-500 hover:bg-primary hover:text-white"
               >
                 File Upload
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
         <div className="bg-gray-300 rounded-lg shadow p-8 w-full  mx-auto">
-        <div className="bg-gray-100 p-4 rounded-lg mb-6">
-          <ul className="flex border-b">
-            <li className="mr-1">
-              <a className="bg-white inline-block py-2 px-4 text-blue-500 font-semibold" href="#">Input Text</a>
-            </li>
-            <li className="mr-1">
-              <a className="inline-block py-2 px-4 text-blue-500 hover:text-blue-800" href="#">Pharsed Text</a>
-            </li>
-            <li className="mr-1">
-              <a className="inline-block py-2 px-4 text-blue-500 hover:text-blue-800" href="#">URL List</a>
-            </li>
-          </ul>
-        </div>
-        <textarea
-          className="w-full p-4 border border-gray-300 rounded h-64"
-          placeholder="Copy text html atau markdown ke dalam text area ini, misalnya 
+          <div className="bg-gray-100 p-4 rounded-lg mb-6">
+            <ul className="flex border-b">
+              <li className="mr-1">
+                <Link
+                  className="bg-primary inline-block py-2 px-4 text-blue-500 font-semibold hover:text-white "
+                  href="/"
+                >
+                  Input Text
+                </Link>
+              </li>
+              <li className="mr-1">
+              <Link className="inline-block py-2 px-4 text-blue-500 hover:text-blue-800 hover:text-white hover:bg-primary"
+                  href="/Pharsed">  Pharsed Text
+              </Link>
+               
+              </li>
+              <li className="mr-1">
+                <a
+                  className="inline-block py-2 px-4 text-blue-500 hover:text-blue-800 hover:text-white hover:bg-primary "
+                  href="#"
+                >
+                  URL List
+                </a>
+              </li>
+            </ul>
+          </div>
+          <textarea
+            className="w-full p-4 border border-gray-300 rounded h-64"
+            placeholder="Copy text html atau markdown ke dalam text area ini, misalnya 
           # Personal Project Management
           Untuk dapat bekerja dengan efektif kita harus dapat melakukan organisasi atau pengaturan terhadap tugas yang kita miliki. Dalam artikel ini akan dijelaskan beberapa tools dan metoda yang wajib dikuasasi untuk dapat melakukan pengaturan tugas dengan baik.
 "
-        ></textarea>
-
+          ></textarea>
         </div>
-
-        
       </div>
       {/* <Link to=""> */}
-      <button className="bg-primary text-white px-6 py-2 rounded">
+      <button className="bg-primary hover:bg-secondary text-white px-6 py-2 rounded">
         Upload
       </button>
       {/* </Link> */}
