@@ -1,3 +1,5 @@
+const { Poppins } = require('next/font/google');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -14,6 +16,9 @@ module.exports = {
         secondary: "#48CFCB",
        
       },
+    },
+    fontFamily: {
+      Poppins: ['var(--font-poppins)', 'sans-serif'],
     },
     },
   plugins: [],
