@@ -25,7 +25,7 @@ export default function FileUpload() {
             
             </li>
             <li className="mr-1">
-                <Link className=" bg-white inline-block py-2 px-4 hover:bg-primary text-blue-500 hover:text-white font-semibold"
+                <Link className=" inline-block py-2 px-4 bg-primary text-white font-semibold"
                 href="/FileUpload">
                         File Upload
                 </Link>
