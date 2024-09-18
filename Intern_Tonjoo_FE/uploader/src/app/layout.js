@@ -1,25 +1,22 @@
-import localFont from "next/font/local";
 import "./globals.css";
+import { Poppins } from "next/font/google";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-poppins',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
 export default function Layout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${poppins.variable}`}>
       <head>
         <title>Image Re-Uploader</title>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className="bg-gray-100 text-gray-800">
+      <body className="bg-gray-100 text-gray-800 font-sans">
         <nav className="bg-primary p-4">
           <div className="container mx-auto flex flex-row justify-between">
             <h1 className="text-white text-2xl">Reuploader</h1>
