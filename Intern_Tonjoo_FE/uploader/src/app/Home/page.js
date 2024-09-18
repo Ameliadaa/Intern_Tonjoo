@@ -14,7 +14,7 @@ export default function Home() {
           <ul className="flex border-b">
             <li className="mr-1">
               <Link
-                className="bg-primary text-white inline-block py-2 px-4  font-semibold"
+                className="bg-primary text-white inline-block py-2 px-4  font-semibold "
                 href="/"
               >
                 Reupload Image in Text
