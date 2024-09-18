@@ -14,7 +14,7 @@ export default function Home() {
           <ul className="flex border-b">
             <li className="mr-1">
               <Link
-                className="bg-primary inline-block py-2 px-4 text-white font-semibold"
+                className="bg-primary inline-block py-2 px-4 text-white font-semibold hover:bg-blue-500"
                 href="/"
               >
                 Reupload Image in Text
@@ -23,7 +23,7 @@ export default function Home() {
             <li className="mr-1">
               <Link
                 href="/LinkReupload"
-                className="inline-block py-2 px-4 text-blue-500  hover:bg-primary hover:text-white "
+                className="inline-block py-2 px-4 text-black  hover:bg-blue-500 hover:text-white "
               >
                 Link Reupload
               </Link>
@@ -31,7 +31,7 @@ export default function Home() {
             <li className="mr-1">
               <Link
                 href="/FileUpload"
-                className="inline-block py-2 px-4 text-blue-500 hover:bg-primary hover:text-white"
+                className="inline-block py-2 px-4 text-black hover:bg-primary hover:text-white"
               >
                 File Upload
               </Link>
