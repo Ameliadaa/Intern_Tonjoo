@@ -4,7 +4,7 @@ export default function Pharsed() {
   return (
     <div className="bg-white rounded-lg shadow p-8 max-w-4xl mx-auto">
       <h2 className="text-3xl font-bold mb-4 text-center">Image Re-Uploader</h2>
-      <p className="text-green-900 mb-6 text-center font-semibold">
+      <p className="mb-6 text-center font-semibold text-primary">
         Reupload any image into our private server
       </p>
 
@@ -23,7 +23,7 @@ export default function Pharsed() {
             <li className="mr-1">
               <Link
                 href="/LinkReupload"
-                className="inline-block py-2 px-4 text-blue-500 hover:text-white hover:bg-primary"
+                className="inline-block py-2 px-4 text-black  hover:bg-secondary hover:text-white"
               >
                 Link Reupload
               </Link>
@@ -31,7 +31,7 @@ export default function Pharsed() {
             <li className="mr-1">
               <Link
                 href="/FileUpload"
-                className="inline-block py-2 px-4 text-blue-500 hover:text-white hover:bg-primary "
+                className="inline-block py-2 px-4 text-black  hover:bg-secondary hover:text-white "
               >
                 File Upload
               </Link>
@@ -42,7 +42,7 @@ export default function Pharsed() {
           <div className="bg-gray-100 p-4 rounded-lg mb-6">
             <ul className="flex border-b">
               <li className="mr-1">
-                <Link className=" inline-block py-2 px-4 text-blue-500  hover:bg-primary hover:text-white "
+                <Link className=" inline-block py-2 px-4 text-black  hover:bg-secondary hover:text-white "
                   href="/"> Input Text
                 </Link>
                
@@ -55,7 +55,7 @@ export default function Pharsed() {
               </li>
               <li className="mr-1">
                 <a
-                  className="inline-block py-2 px-4 hover:bg-primary hover:text-white text-blue-500"
+                  className="inline-block py-2 px-4 text-black  hover:bg-secondary hover:text-white"
                   href="#"
                 >
                   URL List

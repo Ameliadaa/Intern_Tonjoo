@@ -2,8 +2,8 @@ import Link from "next/link";
 export default function FileUpload() {
   return (
     <div className="bg-white rounded-lg shadow p-8 max-w-4xl mx-auto">
-      <h2 className="text-3xl font-bold mb-4 text-center">Image Re-Uploader</h2>
-      <p className="text-green-900 mb-6 text-center font-semibold">
+      <h2 className="text-3xl font-bold mb-4 text-center  ">Image Re-Uploader</h2>
+      <p className=" mb-6 text-center font-semibold text-primary">
         Reupload any image into our private server
       </p>
 
@@ -13,7 +13,7 @@ export default function FileUpload() {
           <ul className="flex border-b">
             <li className="mr-1">
               <Link
-                className="inline-block py-2 px-4 text-blue-500 hover:bg-primary hover:text-white "
+                className="inline-block py-2 px-4  text-black  hover:bg-secondary hover:text-white "
                 href="/"
               >
                
@@ -30,7 +30,7 @@ export default function FileUpload() {
             </li>
             <li className="mr-1">
               <Link
-                className="  inline-block py-2 px-4  text-blue-500 hover:bg-primary hover:text-white"
+                className="  inline-block py-2 px-4  text-black  hover:bg-secondary hover:text-white"
                 href="/FileUpload"
               >
               
@@ -53,8 +53,8 @@ export default function FileUpload() {
                 name="url"
                 type="text"
                 autoComplete="url"
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                placeholder="             Ex: Http://foto.jpg"
+                className="block w-full rounded-md border-0 py-1.5 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset  sm:text-sm sm:leading-6"
+                placeholder="Ex: Http://foto.jpg"
               />
             </div>
           </div>
