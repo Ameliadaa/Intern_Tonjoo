@@ -14,8 +14,9 @@ module.exports = {
         foreground: "var(--foreground)",
         primary: "#14B8A6",
         secondary: "#2563EB",
-        third: "",
-       
+        third: "#D1D4DB",
+        fourth:"#F3F4F6", 
+                     
       },
     },
     fontFamily: {
