@@ -13,7 +13,7 @@ export default function Pharsed() {
         <div className="flex flex-col mb-6">
           <div className="flex justify-around mb-4"></div>
           <Navigasi />
-          <div className="bg-third rounded-lg shadow p-8 w-full  mx-auto">
+          <div className="bg-third  rounded-lg shadow p-8 w-full  mx-auto">
             <NavigasiReupload />
             <textarea
               className="w-full p-4 border border-gray-300 rounded h-64"
