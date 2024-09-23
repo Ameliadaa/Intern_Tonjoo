@@ -12,10 +12,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('images', function (Blueprint $table) {
-            $table->id();
-            $table->string('filename');
-            $table->string('url');
-            $table->timestamps();
+            $table->id();  // Primary key
+            $table->string('path');  // Kolom untuk menyimpan path file gambar
+            $table->timestamps();  // Kolom created_at dan updated_at
         });
     }
 
