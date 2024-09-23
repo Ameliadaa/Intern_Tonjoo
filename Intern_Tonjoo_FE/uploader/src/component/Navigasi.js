@@ -7,7 +7,7 @@ const Navigasi = () => {
   const pathname = usePathname();
 
   return (
-    <div className="bg-gray-100 p-4 rounded-lg mb-6 bg-third">
+    <div className="p-4 rounded-lg mb-6 bg-third">
       <ul className="flex border-b-black ">
         <li className="mr-1 ">
           <Link

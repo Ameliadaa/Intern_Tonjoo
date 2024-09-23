@@ -1,8 +1,11 @@
 import Link from "next/link";
 import Navigasi from "@/component/Navigasi";
+import Navbar from "@/component/Navbar";
 export default function FileUpload() {
   return (
-    <div>
+    <>
+    <Navbar/>
+    <div className="py-6">
       <h2 className="text-3xl font-bold mb-4 text-center">Image Re-Uploader</h2>
       <p className="mb-6 text-center font-semibold text-primary">
         Reupload any image into our private server
@@ -41,5 +44,6 @@ export default function FileUpload() {
         </button>
       </div>
     </div>
+    </>
   );
 }
