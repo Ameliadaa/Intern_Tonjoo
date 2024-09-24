@@ -7,12 +7,13 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Image;
+use PHPUnit\Framework\Attributes\Test; // Pastikan ini ditambahkan
 
 class ImageControllerTest extends TestCase
 {
     use RefreshDatabase;
 
-    /** @test */
+    #[Test]
     public function it_can_list_all_images()
     {
         Image::factory()->count(3)->create();
@@ -23,8 +24,8 @@ class ImageControllerTest extends TestCase
         $response->assertJsonCount(3);
     }
 
-    /** @test */
-    public function it_can_upload_an_image()
+    #[Test]
+    public function it_can_upload_an_image_and_generate_link()
     {
         Storage::fake('local');
 
@@ -40,9 +41,12 @@ class ImageControllerTest extends TestCase
         $this->assertDatabaseHas('images', [
             'path' => 'images/' . $file->hashName(),
         ]);
+
+        $url = Storage::url('images/' . $file->hashName());
+        $response->assertJson(['url' => $url]);
     }
 
-    /** @test */
+    #[Test]
     public function it_can_show_an_image_by_id()
     {
         $image = Image::factory()->create();
@@ -56,7 +60,7 @@ class ImageControllerTest extends TestCase
         ]);
     }
 
-    /** @test */
+    #[Test]
     public function it_returns_404_if_image_not_found()
     {
         $response = $this->getJson('/api/images/9999');
@@ -67,7 +71,7 @@ class ImageControllerTest extends TestCase
         ]);
     }
 
-    /** @test */
+    #[Test]
     public function it_can_update_an_image()
     {
         Storage::fake('local');
@@ -84,7 +88,7 @@ class ImageControllerTest extends TestCase
 
         $response->assertStatus(200);
         Storage::disk('local')->assertMissing($image->path);
-        Storage::disk('local')->assertExists('images/' . $newFile->hashName());
+        $this->assertTrue(Storage::disk('local')->exists('images/' . $newFile->hashName()));
 
         $this->assertDatabaseHas('images', [
             'id' => $image->id,
@@ -92,7 +96,7 @@ class ImageControllerTest extends TestCase
         ]);
     }
 
-    /** @test */
+    #[Test]
     public function it_can_delete_an_image()
     {
         Storage::fake('local');

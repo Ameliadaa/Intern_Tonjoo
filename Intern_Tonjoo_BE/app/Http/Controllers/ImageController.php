@@ -2,20 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Image;  // Pastikan model 'Image' sudah ada
+use App\Models\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class ImageController extends Controller
 {
-    // Menampilkan daftar gambar
     public function index()
     {
         $images = Image::all();
         return response()->json($images);
     }
 
-    // Mengunggah gambar baru
     public function upload(Request $request)
     {
         $request->validate([
@@ -25,15 +23,22 @@ class ImageController extends Controller
         // Simpan gambar
         $path = $request->file('image')->store('images');
 
+        // Buat URL gambar
+        $url = Storage::url($path);
+
         // Simpan data ke database
         $image = new Image();
         $image->path = $path;
+        $image->url = $url;  // Simpan URL gambar
         $image->save();
 
-        return response()->json(['message' => 'Image uploaded successfully', 'image' => $image], 201);
+        return response()->json([
+            'message' => 'Image uploaded successfully',
+            'image' => $image,
+            'url' => $url  // Kirim URL sebagai response
+        ], 201);
     }
 
-    // Menampilkan gambar berdasarkan ID
     public function show($id)
     {
         $image = Image::find($id);
@@ -43,7 +48,6 @@ class ImageController extends Controller
         return response()->json($image);
     }
 
-    // Memperbarui gambar
     public function update(Request $request, $id)
     {
         $image = Image::find($id);
@@ -61,12 +65,16 @@ class ImageController extends Controller
         // Simpan gambar baru
         $path = $request->file('image')->store('images');
         $image->path = $path;
+        $image->url = Storage::url($path); // Update URL gambar
         $image->save();
 
-        return response()->json(['message' => 'Image updated successfully', 'image' => $image]);
+        return response()->json([
+            'message' => 'Image updated successfully',
+            'image' => $image,
+            'url' => $image->url // Kirim URL terbaru
+        ]);
     }
 
-    // Menghapus gambar
     public function destroy($id)
     {
         $image = Image::find($id);
