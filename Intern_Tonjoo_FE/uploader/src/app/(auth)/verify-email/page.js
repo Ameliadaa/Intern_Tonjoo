@@ -1,8 +1,8 @@
 'use client'
 
-import Button from '@/components/Button'
-import { useAuth } from '@/hooks/auth'
-import { useState } from 'react'
+import Button from '@/component/Button';
+import { useAuth } from '@/hooks/auth';
+import { useState } from 'react';
 
 const Page = () => {
     const { logout, resendEmailVerification } = useAuth({
