@@ -1,9 +1,12 @@
 import Link from 'next/link';
-import AuthCard from '@/app/(auth)/AuthCard';
-import ApplicationLogo from '@/component/ApplicationLogo';
+import AuthCard from '@/app/(auth)/AuthCard'; 
+// import ApplicationLogo from '@/component/ApplicationLogo';
+import Image from 'next/image'
+import LogoApps from "../../../public/LogoApps.svg"; 
 
-export const metadata = {
-    title: 'Laravel',
+
+export const metadata = { 
+    title: 'File Uploader', 
 }
 
 const Layout = ({ children }) => {
@@ -13,7 +16,8 @@ const Layout = ({ children }) => {
                 <AuthCard
                     logo={
                         <Link href="/">
-                            <ApplicationLogo className="w-20 h-20 fill-current text-gray-500" />
+                            {/* <ApplicationLogo className="w-20 h-20 fill-current text-gray-500" /> */}
+                            <Image src={LogoApps} width={100} height={100} />
                         </Link>
                     }>
                     {children}

@@ -4,7 +4,7 @@ export const metadata = {
     title: 'Dashboard-Admin',
 }
 
-const Dashboard = () => {
+const dashboard = () => {
     return (
         <>
             <Header title="Dashboard" />
@@ -21,4 +21,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard
+export default dashboard
